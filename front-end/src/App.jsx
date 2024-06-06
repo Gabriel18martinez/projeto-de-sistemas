@@ -27,7 +27,7 @@ export default  function App() {
           <h2>{carro.nome}</h2>
           <p>Preço: R$ {carro.preco}</p>
           <BasicModal description={carro.descricao}/>
-          <button><Link to={"pagamento"}/>Alugar</button>
+          <button><Link to={"pagamento"} className="link">Alugar</Link></button>
         </div>
       ))}
     </div>

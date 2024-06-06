@@ -4,7 +4,9 @@ import App from './App.jsx'
 import { createBrowserRouter } from 'react-router-dom'
 import Header from './Header/Header.jsx'
 import { RouterProvider } from 'react-router-dom'
-import Pagamento from './pagamento.jsx'
+import Pagamento from './pages/pagamento.jsx'
+import ThankYou from './pages/obrigado.jsx'
+
 
 
 const router = createBrowserRouter([
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "pagamento",
         element: <Pagamento/>
+      },
+      {
+        path: "pagamento/obrigado",
+        element: <ThankYou/>
       }
     ]
   }

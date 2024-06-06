@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
     <header className="header">
-      <button className="home-button">Home</button>
+      <button className="home-button"><a href="/">Home</a></button>
       <img
         className="logo"
         src="favicon.ico"
