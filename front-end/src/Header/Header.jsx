@@ -7,6 +7,7 @@ export default function Header() {
     <>
     <header className="header">
       <button className="home-button"><a href="/">Home</a></button>
+      <h1>AluCar</h1>
       <img
         className="logo"
         src="favicon.ico"

@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import './PaymentForm.css';
+import { Link } from 'react-router-dom';
+
+
 
 const Pagamento = () => {
   const [formData, setFormData] = useState({
@@ -9,8 +11,11 @@ const Pagamento = () => {
     sobrenome: '',
     email: '',
     celular: '',
+    numeroCartao: '',
+    validadeCartao: '',
+    cvv: ''
   });
-  
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,18 +28,17 @@ const Pagamento = () => {
       ...formData,
       celular: parseInt(formData.celular, 10) // Converte celular para número
     };
-    console.log('Form data being submitted:', dataToSend);
     try {
-      const response = await axios.post('http://localhost:8080/usuario', dataToSend, {
+      await axios.post('http://localhost:8080/usuario', dataToSend, {
         headers: {
           'Content-Type': 'application/json'
         }
       });
-      console.log('Response from server:', response.data);
     } catch (error) {
       console.error('Erro ao criar usuário:', error);
     }
   };
+
 
   return (
     <div className="user-form-container">
@@ -86,19 +90,40 @@ const Pagamento = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="Número do cartão">Número do cartão</label>
-          <input required/>
+          <label htmlFor="numeroCartao">Número do cartão</label>
+          <input
+            type="text"
+            id="numeroCartao"
+            name="numeroCartao"
+            value={formData.numeroCartao}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="form-group">
-          <label htmlFor="Validade do cartão">Validade do cartão</label>
-          <input required/>
+          <label htmlFor="validadeCartao">Validade do cartão</label>
+          <input
+            type="text"
+            id="validadeCartao"
+            name="validadeCartao"
+            value={formData.validadeCartao}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="form-group">
-          <label htmlFor="CVV">CVV</label>
-          <input required/>
+          <label htmlFor="cvv">CVV</label>
+          <input
+            type="text"
+            id="cvv"
+            name="cvv"
+            value={formData.cvv}
+            onChange={handleChange}
+            required
+          />
         </div>
         <br />
-        <Link to={"obrigado"} className='link'><button type="submit" className="submit-button">Cadastrar</button></Link>
+        <Link to={'obrigado'}><button type="submit" className="submit-button">Cadastrar</button></Link>
       </form>
     </div>
   );
