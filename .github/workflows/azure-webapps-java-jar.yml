@@ -53,7 +53,7 @@ jobs:
         run: ls -la ./back-end
         
       - name: Check for pom.xml in back-end directory
-        run: test -f ./projeto-de-sistemas/back-end/pom.xml && echo "Found pom.xml in back-end" || echo "pom.xml not found in back-end"
+        run: test -f ./back-end/pom.xml && echo "Found pom.xml in back-end" || echo "pom.xml not found in back-end"
         
       - name: Build with Maven
         run: mvn clean install
