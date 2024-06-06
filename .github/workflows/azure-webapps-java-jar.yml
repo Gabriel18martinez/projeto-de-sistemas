@@ -20,7 +20,7 @@
 name: Build and deploy JAR app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: your-app-name    # set this to the name of your Azure Web App
+  AZURE_WEBAPP_NAME: trabalho-edgar   # set this to the name of your Azure Web App
   JAVA_VERSION: '17'                  # set this to the Java version to use
   DISTRIBUTION: zulu                  # set this to the Java distribution
 
@@ -62,7 +62,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: java-app
+          name: cargallery
           path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
@@ -78,7 +78,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: java-app
+          name: cargallery
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
