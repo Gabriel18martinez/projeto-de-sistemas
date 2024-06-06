@@ -1,0 +1,33 @@
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.home-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+.logo {
+    max-width: 100px;
+    max-height: 50px;
+    margin: 0 auto;
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-button{
+    margin: 0 auto;
+}
+

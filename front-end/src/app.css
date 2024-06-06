@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+}
+  
+.card h2 {
+    margin-top: 0;
+}
+  
+.card p {
+    margin: 10px 0;
+}
+  
+.card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+  
+.card button:hover {
+    background-color: #0056b3;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* ou qualquer outra largura desejada */
+    max-height: 200px; /* ou qualquer outra altura desejada */
+    object-fit: cover; /* para garantir que a imagem seja redimensionada para preencher o espaço disponível */
+    border-radius: 5px; /* adicione borda arredondada se desejar */
+}
+
+.card {
+    font-family: Arial, sans-serif; /* Define a fonte para toda a div do card */
+}
+  
+.card h2 {
+    font-size: 20px; /* Define o tamanho da fonte do título */
+    margin-top: 10px; /* Adiciona um pequeno espaço acima do título */
+}
+  
+.card p {
+    font-size: 16px; /* Define o tamanho da fonte dos parágrafos */
+    margin: 5px 0; /* Adiciona um pequeno espaço vertical entre os parágrafos */
+}
+  
+.card button {
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+   cursor: pointer;
+}
+  
+.card button:hover {
+    background-color: #0056b3;
+}
+  
+  
+  
