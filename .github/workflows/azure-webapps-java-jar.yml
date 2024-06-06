@@ -54,7 +54,7 @@ jobs:
         
       - name: Build with Maven
         run: mvn clean install
-        working-directory: ./projeto-de-sistemas/back-end/pom.xml
+        working-directory: ./projeto-de-sistemas/back-end
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
