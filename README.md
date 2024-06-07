@@ -23,5 +23,6 @@ Trabalho da matéria de Análise Projeto de Sistemas onde simulamos um marketpla
 
 # Integrantes
 
-Gabriel Martinez
-Matheus Gadelha
+***Gabriel Martinez***
+
+***Matheus Gadelha***
